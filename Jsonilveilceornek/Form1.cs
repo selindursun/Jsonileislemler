@@ -17,5 +17,19 @@ namespace Jsonilveilceornek
             InitializeComponent();
         }
 
+        private void ILToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //açık bir form varsa onu kapat.
+            if (this.ActiveMdiChild!=null)
+            {
+                this.ActiveMdiChild.Hide();
+            }
+            FormILSorgulama formILSorgulama = new FormILSorgulama();
+            formILSorgulama.MdiParent = this;
+            formILSorgulama.Show();
+            //form içinde form boyutlarında göstermesi için ayarlama yap
+            this.LayoutMdi(MdiLayout.TileVertical);
+
+        }
     }
 }
