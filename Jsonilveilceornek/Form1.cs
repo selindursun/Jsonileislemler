@@ -31,5 +31,22 @@ namespace Jsonilveilceornek
             this.LayoutMdi(MdiLayout.TileVertical);
 
         }
+
+        private void ILCESorgulamaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild!=null)
+            {
+                
+                    this.ActiveMdiChild.Hide();
+
+            }
+
+            FormIlinIlceleriniSorgulama formIlce = new FormIlinIlceleriniSorgulama();
+
+            formIlce.MdiParent = this;
+            formIlce.Show();
+
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
     }
 }
