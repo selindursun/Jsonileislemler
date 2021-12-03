@@ -8,7 +8,7 @@ namespace ILveILCEJSON_ENTITYMODELS.Classlar
 {
    public class ILILceBilgileri
     {
-        public string Plaka { get;set; }
+        public byte Plaka { get;set; }
         public string Ismi { get; set; }
         public string Tel { get; set; }
         public string Faks { get; set; }

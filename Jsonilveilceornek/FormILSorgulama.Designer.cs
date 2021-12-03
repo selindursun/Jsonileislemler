@@ -33,6 +33,11 @@ namespace Jsonilveilceornek
             this.comboBoxILSEC = new System.Windows.Forms.ComboBox();
             this.btnSec = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // label1
@@ -61,21 +66,50 @@ namespace Jsonilveilceornek
             this.btnSec.TabIndex = 2;
             this.btnSec.Text = "SEÇ";
             this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(59, 116);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(451, 292);
+            this.listView1.Size = new System.Drawing.Size(527, 355);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "İsim";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Telefon";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Fax";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Eposta";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Web Sitesi";
             // 
             // FormILSorgulama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 567);
+            this.ClientSize = new System.Drawing.Size(674, 612);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnSec);
             this.Controls.Add(this.comboBoxILSEC);
@@ -94,5 +128,10 @@ namespace Jsonilveilceornek
         private System.Windows.Forms.ComboBox comboBoxILSEC;
         private System.Windows.Forms.Button btnSec;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
